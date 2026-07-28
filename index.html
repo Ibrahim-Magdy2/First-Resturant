@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YourBrand | مطعم فاخر</title>
+  <meta name="description" content="YourBrand | تجربة مطعم فاخر ذات طابع عالمي لجميع المناسبات.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="page-loader" class="loader-screen">
+    <div class="loader-shell">
+      <div class="loader-ring"></div>
+      <span class="loader-text">جاري التحميل</span>
+    </div>
+  </div>
+
+  <div class="custom-cursor" id="customCursor"></div>
+  <div class="top-progress" id="topProgress"></div>
+  <a href="https://wa.me/201014053954" target="_blank" class="floating-whatsapp" aria-label="حجز عبر واتساب">
+    <span>واتساب</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.148-1.758-.867-2.03-.967-.273-.099-.472-.148-.672.148-.198.297-.767.967-.94 1.165-.173.198-.347.223-.644.074-1.758-.867-2.903-1.541-4.074-3.473-.31-.532.31-.495.893-1.643.099-.198.05-.372-.025-.52-.074-.148-.672-1.612-.92-2.21-.242-.579-.487-.5-.672-.51-.173-.01-.372-.01-.57-.01-.198 0-.52.074-.792.372-.273.297-1.04 1.016-1.04 2.48 0 1.462 1.065 2.875 1.213 3.074.148.198 2.096 3.2 5.077 4.487.71.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.72 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.273-.198-.57-.347z"></path></svg>
+  </a>
+
+  <header class="main-header">
+    <nav class="nav container glass-panel">
+      <div class="nav-brand">
+        <a href="#hero" class="logo">YourBrand</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-menu" id="navMenu">
+        <a href="#about" data-i18n="navAbout">عن المطعم</a>
+        <a href="#chef" data-i18n="navChef">الطاهى</a>
+        <a href="#special" data-i18n="navSpecial">مميز اليوم</a>
+        <a href="#menu" data-i18n="navMenu">القائمة</a>
+        <a href="#gallery" data-i18n="navGallery">المعرض</a>
+        <a href="#reserve" data-i18n="navReserve">الحجز</a>
+      </div>
+      <div class="nav-tools">
+        <button class="btn-outline small" id="langToggle">EN</button>
+        <button class="btn-icon small" id="themeToggle" aria-label="تبديل الموضوع">
+          <span class="theme-icon">☾</span>
+        </button>
+        <a href="#reserve" class="btn-primary" data-i18n="navReserveButton">احجز الآن</a>
+      </div>
+
+<div>
+
+<div class="search-box">
+    <input
+        type="text"
+        id="siteSearch"
+        placeholder="ابحث عن أي شيء..."
+        autocomplete="off"
+    >
+
+    <div id="searchResults" class="search-results"></div>
+</div>
+
+</div>
+
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero-section">
+      <div class="hero-slides" id="heroSlides">
+        <article class="hero-slide active" data-image="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1200" data-title="اكتشف أرقى تجربة طعام" data-subtitle="قائمة موقوتة بعناية وفنون طهي عالمية" data-title-en="Discover the ultimate dining experience" data-subtitle-en="A curated menu crafted with precision and global flair" data-key="slide1"></article>
+        <article class="hero-slide" data-image="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=1200" data-title="تصميم فاخر لكل مناسبة" data-subtitle="حجز حصري لأمسية راقية تحت نجوم المدينة" data-title-en="Luxury design for every occasion" data-subtitle-en="Exclusive booking for a refined evening under city lights" data-key="slide2"></article>
+        <article class="hero-slide" data-image="https://images.pexels.com/photos/1400401/pexels-photo-1400401.jpeg?auto=compress&cs=tinysrgb&w=1200" data-title="ذواقة المستقبل" data-subtitle="نختار المكونات الطازجة لنقدم لك توقيعًا لا يُنسى" data-title-en="Taste the future" data-subtitle-en="Fresh ingredients meet unforgettable signature creations" data-key="slide3"></article>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <div class="hero-text">
+          <span class="eyebrow" data-i18n="heroEyebrow">مطعم فخم</span>
+          <h1 id="heroTitle">اكتشف أرقى تجربة طعام</h1>
+          <p id="heroSubtitle">قائمة موقوتة بعناية وفنون طهي عالمية</p>
+          <div class="hero-actions">
+            <a href="#reserve" class="btn-primary" data-i18n="heroReserve">احجز طاولتك</a>
+            <a href="#menu" class="btn-secondary" data-i18n="heroMenu">عرض القائمة</a>
+          </div>
+        </div>
+        <div class="hero-floats" id="heroFloats">
+          <div class="hero-card glass-panel float-card">
+            <p class="card-label" data-i18n="todaySpecial">مميز اليوم</p>
+            <h3 data-i18n="todaySpecialDish">ميني لحم بقر فاخر</h3>
+            <span>125 ريال</span>
+          </div>
+          <div class="hero-card glass-panel float-card">
+            <p class="card-label" data-i18n="chefRecommend">توصية الشيف</p>
+            <h3 data-i18n="chefSignature">سوشي سموكي بالزعفران</h3>
+            <span>أفضل اختيار</span>
+          </div>
+          <div class="hero-card glass-panel float-card">
+            <p class="card-label" data-i18n="openingHours">أوقات العمل</p>
+            <h3>12م - 2ص</h3>
+            <span data-i18n="openEveryday">كل يوم</span>
+          </div>
+          <div class="hero-card glass-panel float-card">
+            <p class="card-label" data-i18n="rating">التقييم</p>
+            <h3>4.9 <span>★</span></h3>
+            <span data-i18n="michelinStar">نجمة ميشلان</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-controls" id="heroControls"></div>
+    </section>
+
+    <section id="about" class="section about-section container">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="aboutEyebrow">لماذا YourBrand؟</span>
+        <h2 data-i18n="aboutTitle">مطعم من تصميم فخم يتجاوز التوقعات</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-copy">
+          <p data-i18n="aboutStory">YourBrand يجمع بين الفخامة والتجربة الحسية لوجبة لا تُنسى. نعيد تعريف الضيافة العربية من خلال أجواء راقية وخدمة تفوق الخيال.</p>
+          <div class="about-items">
+            <div>
+              <h3 data-i18n="aboutMissionTitle">مهمتنا</h3>
+              <p data-i18n="aboutMissionText">تقديم أطباق تجمع بين الأصالة والابتكار في كل لقمة.</p>
+            </div>
+            <div>
+              <h3 data-i18n="aboutExperienceTitle">خبرتنا</h3>
+              <p><strong>12</strong> <span data-i18n="aboutYears">سنة</span> <span data-i18n="aboutExperienceText">في تقديم خدمات ضيافة فاخرة</span></p>
+            </div>
+          </div>
+          <div class="about-counters">
+            <div class="counter-card glass-panel">
+              <span class="counter" data-target="3500">0</span>
+              <p data-i18n="counterCustomers">عميل سعيد</p>
+            </div>
+            <div class="counter-card glass-panel">
+              <span class="counter" data-target="120">0</span>
+              <p data-i18n="counterEvents">فعالية ناجحة</p>
+            </div>
+            <div class="counter-card glass-panel">
+              <span class="counter" data-target="98">0</span>
+              <p data-i18n="counterRate">رضا مضمون %</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-images">
+          <div class="about-image large"></div>
+          <div class="about-image small"></div>
+          <div class="about-image accent"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="chef" class="section chef-section">
+      <div class="container chef-grid">
+        <div class="chef-visual glass-panel">
+          <div class="chef-photo"></div>
+        </div>
+        <div class="chef-details">
+          <span class="eyebrow" data-i18n="chefEyebrow">الطاهى التنفيذي</span>
+          <h2 data-i18n="chefTitle">الشيف/...............</h2>
+          <p data-i18n="chefBio">خمس نجوم في فنون الطهي. يشتهر بابتكاره للتوازن بين النكهات العربية والعالمية وابتكاره لأطباق حصرية باحترافية عالية.</p>
+          <div class="chef-highlights">
+            <div>
+              <h3>24</h3>
+              <p data-i18n="chefAwards">جوائز دولية</p>
+            </div>
+            <div>
+              <h3>18</h3>
+              <p data-i18n="chefExperience">سنة خبرة</p>
+            </div>
+            <div>
+              <h3 data-i18n="chefSignature">الطبق المميز</h3>
+              <p data-i18n="chefSignatureText">لحم الضأن المحمص مع صلصة الكراميل المدخن.</p>
+            </div>
+          </div>
+          <div class="chef-awards">
+            <div class="award-badge">Michelin</div>
+            <div class="award-badge">Top 50</div>
+            <div class="award-badge">Luxury Guide</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="special" class="section special-section container">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="specialEyebrow">مذاق حصري</span>
+        <h2 data-i18n="specialTitle">أفضل أطباقنا لهذا اليوم</h2>
+      </div>
+      <div class="special-grid">
+        <article class="menu-card glass-panel featured">
+          <span class="badge" data-i18n="bestSeller">الأكثر مبيعًا</span>
+          <div class="menu-card-media" style="background-image:url('https://images.pexels.com/photos/2232/vegetables-italian-pizza-restaurant.jpg?auto=compress&cs=tinysrgb&w=1200')"></div>
+          <div class="menu-card-body">
+            <h3 data-i18n="specialDish1">بيتزا لاكشري</h3>
+            <p data-i18n="specialDesc1">مزيج فاخر من الترف والعمق مع جبن الموتزاريلا الإيطالية.</p>
+            <div class="menu-card-meta">
+              <span>145 ريال</span>
+              <span>620 كالوري</span>
+              <span>25 د</span>
+            </div>
+            <a href="#reserve" class="btn-outline" data-i18n="orderNow">اطلب الآن</a>
+          </div>
+        </article>
+        <article class="menu-card glass-panel">
+          <div class="menu-card-media" style="background-image:url('https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=1200')"></div>
+          <div class="menu-card-body">
+            <h3 data-i18n="specialDish2">سالمون سموكي</h3>
+            <p data-i18n="specialDesc2">نغمات رائعة من الليمون والعسل على شريحة سمك ناعمة.</p>
+            <div class="menu-card-meta">
+              <span>169 ريال</span>
+              <span>490 كالوري</span>
+              <span>20 د</span>
+            </div>
+            <a href="#reserve" class="btn-outline" data-i18n="orderNow">اطلب الآن</a>
+          </div>
+        </article>
+        <article class="menu-card glass-panel">
+          <div class="menu-card-media" style="background-image:url('https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg?auto=compress&cs=tinysrgb&w=1200')"></div>
+          <div class="menu-card-body">
+            <h3 data-i18n="specialDish3">ريزوتو الكمأة</h3>
+            <p data-i18n="specialDesc3">لمسة فخمة من الكمأة مع أرز أرابوريو كريمي.</p>
+            <div class="menu-card-meta">
+              <span>189 ريال</span>
+              <span>720 كالوري</span>
+              <span>30 د</span>
+            </div>
+            <a href="#reserve" class="btn-outline" data-i18n="orderNow">اطلب الآن</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="menu" class="section menu-section container">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="menuEyebrow">قائمة تفاعلية</span>
+        <h2 data-i18n="menuTitle">اختر من أرقى الأطباق</h2>
+      </div>
+      <div class="menu-filters" id="menuFilters">
+        <button class="filter-btn active" data-category="all" data-i18n="categoryAll">الكل</button>
+        <button class="filter-btn" data-category="pizza" data-i18n="categoryPizza">بيتزا</button>
+        <button class="filter-btn" data-category="burger" data-i18n="categoryBurger">برجر</button>
+        <button class="filter-btn" data-category="steak" data-i18n="categorySteak">ستيك</button>
+        <button class="filter-btn" data-category="seafood" data-i18n="categorySeafood">مأكولات بحرية</button>
+        <button class="filter-btn" data-category="chicken" data-i18n="categoryChicken">دجاج</button>
+        <button class="filter-btn" data-category="desserts" data-i18n="categoryDesserts">حلويات</button>
+        <button class="filter-btn" data-category="drinks" data-i18n="categoryDrinks">مشروبات</button>
+      </div>
+      <div class="menu-grid" id="menuGrid">
+        <article class="food-card glass-panel" data-category="pizza">
+          <img loading="lazy" src="https://images.pexels.com/photos/315755/pexels-photo-315755.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="بيتزا بحرية">
+          <div class="food-card-content">
+            <div class="food-card-title">
+              <h3 data-i18n="menuItem1">بيتزا سوشي البحر</h3>
+              <button class="favorite-btn" aria-label="المفضلة">♥</button>
+            </div>
+            <p data-i18n="menuDesc1">قاعدة مقرمشة، مزيج من الجمبري والسلمون، صلصة الكريمة المميزة.</p>
+            <p class="food-meta" data-i18n="menuIngredients1">مكونات: سمك، جبنة، صلصة حارّة.</p>
+            <div class="food-card-footer">
+              <span>178 ريال</span>
+              <div class="nav-menu" >
+              <a href="#reserve" class="btn-small" data-i18n="orderButton"><button>اطلب</button></a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="food-card glass-panel" data-category="burger">
+          <img loading="lazy" src="https://images.pexels.com/photos/1639561/pexels-photo-1639561.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="برجر فاخر">
+          <div class="food-card-content">
+            <div class="food-card-title">
+              <h3 data-i18n="menuItem2">برجر ووتر فايف</h3>
+              <button class="favorite-btn" aria-label="المفضلة">♥</button>
+            </div>
+            <p data-i18n="menuDesc2">لحم متبل، جبن الشيدر المعمر، خبز بريوش طري.</p>
+            <p class="food-meta" data-i18n="menuIngredients2">مكونات: لحم، خس، صلصة خاصة.</p>
+            <div class="food-card-footer">
+              <span>155 ريال</span>
+                           <div class="nav-menu" >
+              <a href="#reserve" class="btn-small" data-i18n="orderButton"><button>اطلب</button></a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="food-card glass-panel" data-category="steak">
+          <img loading="lazy" src="https://images.pexels.com/photos/675951/pexels-photo-675951.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="ستيك فاخر">
+          <div class="food-card-content">
+            <div class="food-card-title">
+              <h3 data-i18n="menuItem3">ستيك شامبيوني</h3>
+              <button class="favorite-btn" aria-label="المفضلة">♥</button>
+            </div>
+            <p data-i18n="menuDesc3">شرائح لحم متبلة، صلصة فطر الفوجي، خضار موسمية.</p>
+            <p class="food-meta" data-i18n="menuIngredients3">مكونات: لحم، فطر، زبدة.</p>
+            <div class="food-card-footer">
+              <span>210 ريال</span>
+                          <div class="nav-menu" >
+              <a href="#reserve" class="btn-small" data-i18n="orderButton"><button>اطلب</button></a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="food-card glass-panel" data-category="seafood">
+          <img loading="lazy" src="https://images.pexels.com/photos/357743/pexels-photo-357743.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="مأكولات بحرية">
+          <div class="food-card-content">
+            <div class="food-card-title">
+              <h3 data-i18n="menuItem4">تندر لابيزاريات</h3>
+              <button class="favorite-btn" aria-label="المفضلة">♥</button>
+            </div>
+            <p data-i18n="menuDesc4">طبق بحري فاخر مع لمسة زعفران وعطر الليمون.</p>
+            <p class="food-meta" data-i18n="menuIngredients4">مكونات: جمبري، كاليماري، زعفران.</p>
+            <div class="food-card-footer">
+              <span>198 ريال</span>
+                         <div class="nav-menu" >
+              <a href="#reserve" class="btn-small" data-i18n="orderButton"><button>اطلب</button></a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="food-card glass-panel" data-category="chicken">
+          <img loading="lazy" src="https://images.pexels.com/photos/616354/pexels-photo-616354.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="أطباق دجاج">
+          <div class="food-card-content">
+            <div class="food-card-title">
+              <h3 data-i18n="menuItem5">دجاج تندوري ذهبي</h3>
+              <button class="favorite-btn" aria-label="المفضلة">♥</button>
+            </div>
+            <p data-i18n="menuDesc5">شرائح دجاج متبلة بتوابل خاصة وأرز برائحة القرنفل.</p>
+            <p class="food-meta" data-i18n="menuIngredients5">مكونات: دجاج، توابل، أرز.</p>
+            <div class="food-card-footer">
+              <span>145 ريال</span>
+                         <div class="nav-menu" >
+              <a href="#reserve" class="btn-small" data-i18n="orderButton"><button>اطلب</button></a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="food-card glass-panel" data-category="desserts">
+          <img loading="lazy" src="pexels-skylake-17303221.jpg" alt="حلويات راقية">
+          <div class="food-card-content">
+            <div class="food-card-title">
+              <h3 data-i18n="menuItem6">موس الشوكولاتة الذهبية</h3>
+              <button class="favorite-btn" aria-label="المفضلة">♥</button>
+            </div>
+            <p data-i18n="menuDesc6">مزيج أنعم من الشوكولاتة الداكنة والكراميل الفاخر.</p>
+            <p class="food-meta" data-i18n="menuIngredients6">مكونات: شوكولاتة، كراميل، فانيليا.</p>
+            <div class="food-card-footer">
+              <span>89 ريال</span>
+                           <div class="nav-menu" >
+              <a href="#reserve" class="btn-small" data-i18n="orderButton"><button>اطلب</button></a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="food-card glass-panel" data-category="drinks">
+          <img loading="lazy" src="pexels-khezez-34784895.jpg" alt="مشروبات مميزة">
+          <div class="food-card-content">
+            <div class="food-card-title">
+              <h3 data-i18n="menuItem7">كوكتيل الياقوت</h3>
+              <button class="favorite-btn" aria-label="المفضلة">♥</button>
+            </div>
+            <p data-i18n="menuDesc7">مشروب بارد بلمسة توت رمان وعصير الليمون الطازج.</p>
+            <p class="food-meta" data-i18n="menuIngredients7">مكونات: رمان، نعناع، فواكه.</p>
+            <div class="food-card-footer">
+              <span>65 ريال</span>
+                           <div class="nav-menu" >
+              <a href="#reserve" class="btn-small" data-i18n="orderButton"><button>اطلب</button></a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="signature" class="section signature-section">
+      <div class="section-head container">
+        <span class="eyebrow" data-i18n="signatureEyebrow">التوقيعات الخاصة</span>
+        <h2 data-i18n="signatureTitle">أطباق مختارة بتقنية عرض ثلاثية الأبعاد</h2>
+      </div>
+      <div class="carousel-shell container">
+        <button class="carousel-arrow prev" id="carouselPrev" aria-label="السابق">‹</button>
+        <div class="carousel-view" id="signatureCarousel">
+          <article class="carousel-card active" data-title="سوبريم ربيان" data-desc="روابط بحرية ناعمة مع صلصة الكريمة المدخنة" style="background-image:url('https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=1200')">
+            <div class="carousel-copy">
+              <h3>سوبريم ربيان</h3>
+              <p>تجربة بحرية تكشف عن أعمق النكهات.</p>
+            </div>
+          </article>
+          <article class="carousel-card" data-title="ريزوتو الكمأة" data-desc="كرمات أرز مع عبق الكمأة العالمية" style="background-image:url('https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg?auto=compress&cs=tinysrgb&w=1200')">
+            <div class="carousel-copy">
+              <h3>ريزوتو الكمأة</h3>
+              <p>فخامة أطعمة النخبة مع قوام كريمي لا يقاوم.</p>
+            </div>
+          </article>
+          <article class="carousel-card" data-title="ستيك نوير" data-desc="شرائح لحم على أتم الاستعداد مع نكهات عميقة" style="background-image:url('https://images.pexels.com/photos/675951/pexels-photo-675951.jpeg?auto=compress&cs=tinysrgb&w=1200')">
+            <div class="carousel-copy">
+              <h3>ستيك نوير</h3>
+              <p>عشق اللحوم يتجسد في كل قضمة.</p>
+            </div>
+          </article>
+        </div>
+        <button class="carousel-arrow next" id="carouselNext" aria-label="التالي">›</button>
+      </div>
+    </section>
+
+    <section id="gallery" class="section gallery-section container">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="galleryEyebrow">المعرض الفاخر</span>
+        <h2 data-i18n="galleryTitle">صور تخطف الأنفاس من أجوائنا</h2>
+      </div>
+      <div class="gallery-filters" id="galleryFilters">
+        <button class="filter-btn active" data-category="all" data-i18n="galleryAll">الكل</button>
+        <button class="filter-btn" data-category="dining" data-i18n="galleryDining">الطعام</button>
+        <button class="filter-btn" data-category="interior" data-i18n="galleryInterior">الديكور</button>
+        <button class="filter-btn" data-category="events" data-i18n="galleryEvents">الفعاليات</button>
+      </div>
+      <div class="gallery-grid" id="galleryGrid">
+        <button class="gallery-item glass-panel" data-category="dining" data-image="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1200">
+          <img loading="lazy" src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=600" alt="طعام فاخر">
+          <div class="gallery-overlay"><span data-i18n="viewImage">عرض</span></div>
+        </button>
+        <button class="gallery-item glass-panel" data-category="interior" data-image="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1200">
+          <img loading="lazy" src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=600" alt="ديكور داخلي">
+          <div class="gallery-overlay"><span data-i18n="viewImage">عرض</span></div>
+        </button>
+        <button class="gallery-item glass-panel" data-category="events" data-image="https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=1200">
+          <img loading="lazy" src="https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=600" alt="فعالية موسيقية">
+          <div class="gallery-overlay"><span data-i18n="viewImage">عرض</span></div>
+        </button>
+        <button class="gallery-item glass-panel" data-category="dining" data-image="https://images.pexels.com/photos/6335/food-salad-healthy-lunch.jpg?auto=compress&cs=tinysrgb&w=1200">
+          <img loading="lazy" src="pexels-fakhri98-17132247.jpg" alt="سلطة فاخرة">
+          <div class="gallery-overlay"><span data-i18n="viewImage">عرض</span></div>
+        </button>
+        <button class="gallery-item glass-panel" data-category="interior" data-image="https://images.pexels.com/photos/1601075/pexels-photo-1601075.jpeg?auto=compress&cs=tinysrgb&w=1200">
+          <img loading="lazy" src="https://images.pexels.com/photos/1601075/pexels-photo-1601075.jpeg?auto=compress&cs=tinysrgb&w=600" alt="جلسة أنيقة">
+          <div class="gallery-overlay"><span data-i18n="viewImage">عرض</span></div>
+        </button>
+      </div>
+    </section>
+
+    <section id="choose" class="section choose-section container">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="chooseEyebrow">اختر الفخامة</span>
+        <h2 data-i18n="chooseTitle">لماذا يعتمد علينا عملاؤنا؟</h2>
+      </div>
+      <div class="choose-grid">
+        <div class="feature-card glass-panel">
+          <span class="icon">🥬</span>
+          <h3 data-i18n="chooseFresh">مكونات طازجة</h3>
+          <p data-i18n="chooseFreshText">نستخدم منتجات بجودة النخبة لخلق تجارب لا تُنسى.</p>
+        </div>
+        <div class="feature-card glass-panel">
+          <span class="icon">👨‍🍳</span>
+          <h3 data-i18n="chooseChefs">شيفات محترفون</h3>
+          <p data-i18n="chooseChefsText">فريق عالمي بخبرة يقدم أطباق فنية.</p>
+        </div>
+        <div class="feature-card glass-panel">
+          <span class="icon">⚡</span>
+          <h3 data-i18n="chooseFast">خدمة سريعة</h3>
+          <p data-i18n="chooseFastText">توقيت دقيق وتقديم منظم في كل زيارة.</p>
+        </div>
+        <div class="feature-card glass-panel">
+          <span class="icon">✨</span>
+          <h3 data-i18n="chooseAtmosphere">أجواء فاخرة</h3>
+          <p data-i18n="chooseAtmosphereText">تصميم يجمع الدفء والرفاهية للضيف.</p>
+        </div>
+        <div class="feature-card glass-panel">
+          <span class="icon">🏍️</span>
+          <h3 data-i18n="chooseDelivery">توصيل منزلي</h3>
+          <p data-i18n="chooseDeliveryText">تجربة فاخرة تصل إلى بابك.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="reserve" class="section reserve-section container">
+      <div class="reserve-grid">
+        <div class="reserve-copy">
+          <span class="eyebrow" data-i18n="reserveEyebrow">احجز الآن</span>
+          <h2 data-i18n="reserveTitle">حجز طاولة من فئة الصفوة</h2>
+          <p data-i18n="reserveText">أكمل نموذج الحجز الفاخر لتأمين مقعدك في تجربة طعام فريدة.</p>
+          <div class="reservation-summary glass-panel" id="reservationSummary">
+            <h3 data-i18n="summaryTitle">ملخص الحجز</h3>
+            <p><strong data-i18n="summaryName">الاسم:</strong> <span id="summaryName">-</span></p>
+            <p><strong data-i18n="summaryPhone">الهاتف:</strong> <span id="summaryPhone">-</span></p>
+            <p><strong data-i18n="summaryGuests">الضيوف:</strong> <span id="summaryGuests">-</span></p>
+            <p><strong data-i18n="summaryDate">التاريخ:</strong> <span id="summaryDate">-</span></p>
+            <p><strong data-i18n="summaryTime">الوقت:</strong> <span id="summaryTime">-</span></p>
+            <p><strong data-i18n="summaryRequest">الطلب الخاص:</strong> <span id="summaryRequest">-</span></p>
+            <a href="https://wa.me/201014053954?text=%D8%A3%D8%B1%D8%BA%D9%88%20%D8%B7%D8%A7%D9%88%D9%84%D8%A9%20%D8%B1%D8%AC%D8%A7%D8%A1" class="btn-primary" target="_blank" data-i18n="summaryWhatsApp">احجز عبر واتساب</a>
+          </div>
+        </div>
+        <form class="reserve-form glass-panel" id="reserveForm">
+          <label>
+            <span data-i18n="formName">الاسم الكامل</span>
+            <input type="text" id="inputName" placeholder="اكتب اسمك" required>
+          </label>
+
+          <label>
+            <span data-i18n="formPhone">رقم الهاتف</span>
+            <input type="tel" id="inputPhone" placeholder="010XXXXXXXX" required>
+          </label>
+          
+        <label>
+  <span>اختر وجبتك</span>
+  <select id="inputMeal">
+    <option value="145">بيتزا لاكشري</option>
+    <option value="169">سالمون سموكي</option>
+    <option value="189">ريزوتو الكمأة</option>
+    <option value="178">بيتزا سوشي البحر</option>
+    <option value="155">برجر ووتر فايف</option>
+    <option value="210">ستيك شامبيوني</option>
+    <option value="198">تندر لابيزاريات</option>
+    <option value="145">دجاج تندوري ذهبي</option>
+    <option value="89">موس الشوكولاتة الذهبية</option>
+    <option value="65">كوكتيل الياقوت</option>
+  </select>
+</label>
+
+<label>
+  <span>عدد الوجبات</span>
+  <input type="number" id="inputQuantity" min="1" value="1">
+</label>
+
+          <label>
+            <span data-i18n="formGuests">عدد الضيوف</span>
+            <input type="number" id="inputGuests" value="0" min="1" max="100" step="1">
+          </label>
+
+          <label>
+            <span data-i18n="formDate">التاريخ</span>
+            <input type="date" id="inputDate" required>
+          </label>
+
+          <label>
+            <span data-i18n="formTime">الوقت</span>
+            <input type="time" id="inputTime" required>
+          </label>
+
+          <label>
+            <span data-i18n="formRequest">طلبات خاصة</span>
+            <textarea id="inputRequest" placeholder="مثال: طاولة بجانب النافذة"></textarea>
+          </label>
+
+          <button type="submit" class="btn-primary" data-i18n="formSubmit">قم بالحجز</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section testimonials-section container">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="testimonialsEyebrow">آراء العملاء</span>
+        <h2 data-i18n="testimonialsTitle">تجارب تلامس الفخامة</h2>
+      </div>
+      <div class="testimonials-slider" id="testimonialsSlider">
+        <article class="testimonial-card glass-panel active">
+          <p>"أجواء ساحرة وخدمة لا تُضاهى. كل التفاصيل تُظهر مستوى عالي من الاحتراف."</p>
+          <div class="testimonial-meta">
+            <img loading="lazy" src="" alt="صورة عميل">
+            <div>
+              <strong>سلمان</strong>
+              <span>5 نجوم</span>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card glass-panel">
+          <p>"أفضل تجربة طعام منذ سنوات. الطعام، الإضاءة، الموسيقى، كانت مثالية."</p>
+          <div class="testimonial-meta">
+            <img loading="lazy" src="" alt="صورة عميل">
+            <div>
+              <strong>ليلى</strong>
+              <span>5 نجوم</span>
+            </div>
+          </div>
+        </article>
+        <article class="testimonial-card glass-panel">
+          <p>"كل طبق يروي قصة. ما زلت أتذكر النكهة الرائعة بعد أسبوع."</p>
+          <div class="testimonial-meta">
+            <img loading="lazy" src="" alt="صورة عميل">
+            <div>
+              <strong>هالة</strong>
+              <span>4 نجوم</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="statistics" class="section stats-section container">
+      <div class="stats-grid">
+        <div class="stat-card glass-panel">
+          <h3 class="stat-number" data-target="4850">0</h3>
+          <p data-i18n="statsCustomers">عملاء سعداء</p>
+        </div>
+        <div class="stat-card glass-panel">
+          <h3 class="stat-number" data-target="12900">0</h3>
+          <p data-i18n="statsDishes">طبق مُقدم</p>
+        </div>
+        <div class="stat-card glass-panel">
+          <h3 class="stat-number" data-target="12">0</h3>
+          <p data-i18n="statsYears">سنة خبرة</p>
+        </div>
+        <div class="stat-card glass-panel">
+          <h3 class="stat-number" data-target="24">0</h3>
+          <p data-i18n="statsAwards">جوائز</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="video" class="section video-section container">
+      <div class="video-panel glass-panel">
+        <div class="video-copy">
+          <span class="eyebrow" data-i18n="videoEyebrow">مشهد سينمائي</span>
+          <h2 data-i18n="videoTitle">استعد لرحلة بصرية داخل مطعمنا</h2>
+          <p data-i18n="videoText">شاهد طريقة إعداد أطباقنا بحرفية معدة بعناية عبر فيديو حصري.</p>
+        </div>
+        <button class="video-play" id="videoPlay" aria-label="تشغيل الفيديو">
+          <span>▶</span>
+        </button>
+      </div>
+      <div class="video-overlay" id="videoOverlay">
+        <div class="video-modal">
+          <button class="close-video" id="closeVideo" aria-label="إغلاق الفيديو">×</button>
+          <video controls preload="metadata" id="previewVideo" poster="https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg?auto=compress&cs=tinysrgb&w=1200">
+            <source src="" type="video/mp4">
+            Your browser does not support HTML video.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section id="instagram" class="section instagram-section container">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="instagramEyebrow">انستغرام</span>
+        <h2 data-i18n="instagramTitle">لحظات مختارة من حسابنا</h2>
+      </div>
+      <div class="insta-grid">
+        <a href="#" class="insta-card" style="background-image:url('pexels-firas-chougari-259134793-17708242.jpg')"></a>
+        <a href="#" class="insta-card" style="background-image:url('pexels-marilena-baltzaki-346260-15082376.jpg')"></a>
+        <a href="#" class="insta-card" style="background-image:url('pexels-valeriya-16474895.jpg')"></a>
+        <a href="#" class="insta-card" style="background-image:url('pexels-valeriya-18330985.jpg')"></a>
+      </div>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="TikTok">TikTok</a>
+      </div>
+    </section>
+
+    <section id="events" class="section events-section container">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="eventsEyebrow">فعالياتنا</span>
+        <h2 data-i18n="eventsTitle">أمسيات لا تُنسى كل أسبوع</h2>
+      </div>
+      <div class="events-grid">
+        <article class="event-card glass-panel">
+          <h3 data-i18n="eventLive">موسيقى حية</h3>
+          <p data-i18n="eventLiveText">عشاء راقٍ مع أنغام تنبض بالفخامة.</p>
+        </article>
+        <article class="event-card glass-panel">
+          <h3 data-i18n="eventFamily">ليلة العائلة</h3>
+          <p data-i18n="eventFamilyText">جلسات خاصة تناسب العائلات الباحثة عن الخصوصية.</p>
+        </article>
+        <article class="event-card glass-panel">
+          <h3 data-i18n="eventBirthday">حفلات الميلاد</h3>
+          <p data-i18n="eventBirthdayText">باقة متكاملة لتجربة احتفال فخمة.</p>
+        </article>
+        <article class="event-card glass-panel">
+          <h3 data-i18n="eventSpecial">عروض خاصة</h3>
+          <p data-i18n="eventSpecialText">تخفيضات حصرية لأمسية الذواقة.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="faq" class="section faq-section container">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="faqEyebrow">الأسئلة الشائعة</span>
+        <h2 data-i18n="faqTitle">إجابات سريعة على أهم التساؤلات</h2>
+      </div>
+      <div class="faq-list" id="faqList">
+        <button class="faq-item active">
+          <span data-i18n="faqQuestion1">هل يمكن الحجز لمجموعات كبيرة؟</span>
+          <p data-i18n="faqAnswer1">نعم، لدينا باقات خاصة للمجموعات والعائلات مع تصميم مساحة مخصص.</p>
+        </button>
+        <button class="faq-item">
+          <span data-i18n="faqQuestion2">هل تقدمون خيارات نباتية؟</span>
+          <p data-i18n="faqAnswer2">نعم، قائمةنا تشمل أطباق نباتية فاخرة ومبتكرة.</p>
+        </button>
+        <button class="faq-item">
+          <span data-i18n="faqQuestion3">ما أوقات عمل المطعم؟</span>
+          <p data-i18n="faqAnswer3">نرحب بضيوفنا يوميًا من 12 مساءً حتى 2 صباحًا.</p>
+        </button>
+      </div>
+    </section>
+
+    <section id="location" class="section location-section container">
+      <div class="location-grid">
+        <div class="location-map glass-panel">
+          <iframe loading="lazy" src="https://www.google.com/maps?q= القاهرة,وسط البلد,+مصر&output=embed" aria-label="خريطة الموقع"></iframe>
+        </div>
+        <div class="location-details glass-panel">
+          <span class="eyebrow" data-i18n="locationEyebrow">موقعنا</span>
+          <h2 data-i18n="locationTitle">زورونا في قلب المدينة</h2>
+          <div class="location-info">
+            <div>
+              <strong data-i18n="locationHours">ساعات العمل</strong>
+              <p>12م - 2ص</p>
+            </div>
+            <div>
+              <strong data-i18n="locationParking">موقف سيارات</strong>
+              <p data-i18n="locationParkingText">موقف خاص مع خدمة صف السيارات.</p>
+            </div>
+            <div>
+              <strong data-i18n="locationDelivery">توصيل</strong>
+              <p data-i18n="locationDeliveryText">توصيل إلى وسط المدينة وضواحيها.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section container">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="contactEyebrow">تواصل معنا</span>
+        <h2 data-i18n="contactTitle">نحن هنا لخدمتك</h2>
+      </div>
+      <div class="contact-grid">
+        <form class="contact-form glass-panel">
+          <label>
+            <span data-i18n="contactName">اسمك</span>
+            <input type="text" placeholder="أدخل اسمك" required>
+          </label>
+          <label>
+            <span data-i18n="contactEmail">البريد الإلكتروني</span>
+            <input type="email" placeholder="example@mail.com" required>
+          </label>
+          <label>
+            <span data-i18n="contactMessage">رسالتك</span>
+            <textarea placeholder="كيف يمكننا مساعدتك؟" required></textarea>
+          </label>
+          <button type="submit" class="btn-primary" data-i18n="contactSubmit">أرسل الرسالة</button>
+        </form>
+        <div class="contact-details glass-panel">
+          <div class="contact-item">
+            <strong data-i18n="contactPhone">الهاتف</strong>
+            <p>+20 10xxxxxxxx</p>
+          </div>
+          <div class="contact-item">
+            <strong data-i18n="contactEmailLabel">البريد الإلكتروني</strong>
+            <p>info@yourbrand.com</p>
+          </div>
+          <div class="contact-item">
+            <strong data-i18n="contactSocial">تابعنا</strong>
+            <div class="contact-socials">
+              <a href="#">Facebook</a>
+              <a href="#">Instagram</a>
+              <a href="#">TikTok</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer glass-panel">
+    <div class="footer-grid container">
+      <div>
+        <a href="#hero" class="footer-logo">YourBrand</a>
+        <p data-i18n="footerText">تصميم وتجربة نهاية مطاف فاخرة للمطاعم الراقية.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#about" data-i18n="footerAbout">عن المطعم</a>
+        <a href="#menu" data-i18n="footerMenu">القائمة</a>
+        <a href="#reserve" data-i18n="footerReserve">الحجز</a>
+      </div>
+      <div class="footer-newsletter">
+        <span data-i18n="newsletterTitle">النشرة البريدية</span>
+        <form id="newsletterForm">
+          <input type="email" placeholder="بريدك الإلكتروني" required>
+          <button type="submit" class="btn-secondary" data-i18n="newsletterSubmit">اشترك</button>
+        </form>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 YourBrand. جميع الحقوق محفوظة.</p>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى">↑</button>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="إغلاق المعرض">×</button>
+    <img id="lightboxImage" alt="صورة معرض"> 
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
